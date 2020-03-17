@@ -17,22 +17,31 @@ import java.net.URL;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Main {
+	
+	
 
-    private static HttpURLConnection connection;
+	private static HttpURLConnection connection;
+	private static Scanner scanner;
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        BufferedReader reader;
+    	
+    	Data data=new Data();
+    	data.staticData();
+
+    
+    	BufferedReader reader;
         String line;
         StringBuffer output = new StringBuffer();    //append each line
         String ApiUrl;
-        Scanner scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in);
         ApiUrl=scanner.nextLine();
         
         try {
@@ -62,6 +71,8 @@ public class Main {
                 }
                 reader.close();
             }
+            
+
             System.out.print(output.toString());
               parse(output.toString());
 
