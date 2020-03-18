@@ -10,7 +10,8 @@ String str;
 
 int Int;
 JSONObject object;
-{	String json= "{\"name\":\"Egypt\",\"capital\":\"Cairo\",\"region\":\"Africa\",\"callingCodes\":20}";
+{	String json= "{\"name\":\"Egypt\"\n,\"capital\":\"Cairo\"\n,\"region\":\"Africa\"\n,\"callingCodes\":20\n}"
+		+"{\"name\":\"Colombia\",\"capital\":\"Bogota\",\"region\":\"South America\",\"callingCodes\":02}";
 	 object = new JSONObject (json);
  
 }
@@ -30,7 +31,30 @@ public int getInt(String key)
 	System.out.print(Int);
 	return Int;
 
+
 }
+public boolean checkCapital() {
+	String X= "{\"name\":\"Egypt\"\n,\"capital\":\"Cairo\"\n,\"region\":\"Africa\"\n,\"callingCodes\":20\n}";
+ boolean isFound= X.contains("Cairo");
+return isFound;
+	
+}
+
+public boolean checkName() {
+	String X= "{\"name\":\"Egypt\"\n,\"capital\":\"Cairo\"\n,\"region\":\"Africa\"\n,\"callingCodes\":20\n}";
+ boolean isFound= X.contains("Egypt");
+return isFound;
+	
+}
+
+public boolean check() {
+  boolean isFound1= checkCapital();
+  boolean isFound2=checkName();
+  if (isFound1 && isFound2)
+  return true;
+  else return false;
+}
+
 }
 
 	  		  
