@@ -27,7 +27,7 @@ public class Main {
 
 		HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
-		server.createContext("/test", new MyHandler());
+		server.createContext("/test"), new MyHandler());
 		server.setExecutor(null); 
 		server.start();
 
