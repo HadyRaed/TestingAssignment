@@ -15,7 +15,6 @@ public String getString(String key)
 {
 	
 	str= object.getString(key);
-	System.out.print(str);
 	return str;
 
 }
@@ -23,7 +22,6 @@ public int getInt(String key)
 {
 	
 	Int= object.getInt(key);
-	System.out.print(Int);
 	return Int;
 
 }
@@ -32,12 +30,5 @@ public int getInt(String key)
 		    		  
 		    		  
 		    		  
-/*		    		  ("[ {\n" +
-		"    "name": "Colombia",\n" +
-		"    "capital": "Bogotá",\n" +
-		"    "region": "Americas",\n" +
-		"    "population": 48759958,\n" +
-		"    }]"
-		      );
-	*/	 
+
 
