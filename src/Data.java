@@ -1,6 +1,4 @@
 
-import org.json.JSONArray;
-
 import org.json.JSONObject;
 
 public class Data {
@@ -10,8 +8,8 @@ String str;
 
 int Int;
 JSONObject object;
-{	String json= "{\"name\":\"Egypt\"\n,\"capital\":\"Cairo\"\n,\"region\":\"Africa\"\n,\"callingCodes\":20\n}"
-		+"{\"name\":\"Colombia\",\"capital\":\"Bogota\",\"region\":\"South America\",\"callingCodes\":02}";
+{	String json= "{\"name\":\"Egypt\",\"capital\":\"Cairo\",\"region\":\"Africa\",\"callingCodes\":20}";
+
 	 object = new JSONObject (json);
  
 }
@@ -22,6 +20,7 @@ public String getString(String key)
 	str= object.getString(key);
 	System.out.print(str);
 	return str;
+
 
 }
 public int getInt(String key)
