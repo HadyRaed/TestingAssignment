@@ -8,13 +8,36 @@ import junit.framework.Assert;
 
 class unitTest {
 Data data = new Data();
-String obj = data.staticData();
+
+
+String obj ;
 
 	@Test
-	void test() {
-		final String expected = "Colombia";
-		final String actual = obj;
+	void testName() {
+		final String expected = "Egypt";
+		final String actual = data.getString("name");
 		
+		Assert.assertEquals(actual,expected);
+	}
+	@Test
+	void testCaptial() {
+		final String expected = "Cairo";
+		final String actual = data.getString("capital");
+		
+		Assert.assertEquals(actual,expected);
+	}
+	@Test
+	void testRegion() {
+		final String expected = "Africa";
+		final String actual = data.getString("region");
+		
+		Assert.assertEquals(actual,expected);
+	}
+	@Test
+	void testcallingCodes() {
+		final int expected = 20;
+		final int actual = data.getInt("callingCodes");
+
 		Assert.assertEquals(actual,expected);
 	}
 
