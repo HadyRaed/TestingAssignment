@@ -13,12 +13,15 @@ Data data = new Data();
 String obj ;
 
 	@Test
-	void testName() {
+	void testName1() {
 		final String expected = "Egypt";
 		final String actual = data.getString("name");
 		
+		
 		Assert.assertEquals(actual,expected);
 	}
+	
+	
 	@Test
 	void testCaptial() {
 		final String expected = "Cairo";
@@ -40,5 +43,16 @@ String obj ;
 
 		Assert.assertEquals(actual,expected);
 	}
+	
+	@Test
+	void integrationTest() {
+		final boolean expected =true;
+		final boolean actual =data.check();
+		
+		Assert.assertEquals(actual, expected);
+		
+		
+	};
+	
 
 }
