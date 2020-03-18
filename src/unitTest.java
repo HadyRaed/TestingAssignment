@@ -9,6 +9,7 @@ import junit.framework.Assert;
 class unitTest {
 Data data = new Data();
 
+
 String obj ;
 
 	@Test
@@ -36,7 +37,7 @@ String obj ;
 	void testcallingCodes() {
 		final int expected = 20;
 		final int actual = data.getInt("callingCodes");
-		
+
 		Assert.assertEquals(actual,expected);
 	}
 

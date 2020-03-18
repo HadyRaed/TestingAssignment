@@ -28,6 +28,7 @@ public class Main {
         String ApiUrl;
         scanner = new Scanner(System.in);
         ApiUrl=scanner.next();
+
         
         try {
             /*opening connection*/
@@ -58,6 +59,7 @@ public class Main {
             }
              System.out.print(output.toString());
              // parse(output.toString());
+
 
         } catch (MalformedURLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);

@@ -1,9 +1,13 @@
+
+import org.json.JSONArray;
+
 import org.json.JSONObject;
 
 public class Data {
  
 
 String str;
+
 int Int;
 JSONObject object;
 {	String json= "{\"name\":\"Egypt\",\"capital\":\"Cairo\",\"region\":\"Africa\",\"callingCodes\":20}";
@@ -28,6 +32,7 @@ public int getInt(String key)
 
 }
 }
+
 	  		  
 		    		  
 		    		  
