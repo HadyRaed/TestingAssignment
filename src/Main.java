@@ -1,13 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Hady
- *///
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,23 +7,27 @@ import java.net.URL;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Main {
+	
+	
 
-    private static HttpURLConnection connection;
+	private static HttpURLConnection connection;
+	private static Scanner scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String[] args) throws IOException {
-        BufferedReader reader;
+    	
+
+    	BufferedReader reader;
         String line;
         StringBuffer output = new StringBuffer();    //append each line
         String ApiUrl;
-        Scanner scanner = new Scanner(System.in);
-        ApiUrl=scanner.nextLine();
+        scanner = new Scanner(System.in);
+        ApiUrl=scanner.next();
         
         try {
             /*opening connection*/
@@ -42,8 +36,8 @@ public class Main {
 
             /*request*/
             connection.setRequestMethod("GET");
-            connection.setConnectTimeout(5000);
-            connection.setReadTimeout(5000);
+            connection.setConnectTimeout(10000);
+            connection.setReadTimeout(10000);
             int status = connection.getResponseCode();
             System.out.println(status);
 
@@ -62,8 +56,8 @@ public class Main {
                 }
                 reader.close();
             }
-            System.out.print(output.toString());
-              parse(output.toString());
+             System.out.print(output.toString());
+             // parse(output.toString());
 
         } catch (MalformedURLException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -75,7 +69,7 @@ public class Main {
     
     }
     
-    public static void  parse (String response)
+    /*public static void  parse (String response)
     { 
     JSONArray array= new JSONArray(response);
     for (int i = 0 ;i <array.length();i++)
@@ -85,6 +79,6 @@ public class Main {
      //   String topLevelDomain = obj.getString("topLevelDomain");
       //  String capital = obj.getString("captial");
         System.out.println(name);
-    }
+    }*/
 
-}}
+}
